@@ -14,7 +14,7 @@ Compl_data <- union(train_data, test_data)
 Select_data <- select(Compl_data,"Subject", contains("mean"),contains("std"),"Label")
 
 # 3 - Uses descriptive activity names to name the activities in the data set
-Act_label <- read.csv("activity_labels.txt", sep = " ", header = FALSE)
+Act_label <- read.csv("UCI HAR Dataset/activity_labels.txt", sep = " ", header = FALSE)
 names(Act_label) <- c("Label", "Label_Desc")
 Select_data <- inner_join(Select_data, Act_label)
 
