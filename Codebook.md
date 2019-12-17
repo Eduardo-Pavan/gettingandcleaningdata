@@ -7,6 +7,6 @@
 </br>Act_label - relationship list of activity code and label
 </br>Sum_data - Final summarized dataframe<h4>
  <h1>Codebook - Final File Variables:<h1>
-Label_Desc - Activity description
+<h4>Label_Desc - Activity description
 </br>Subject - Resarch Subject ID
-</br>* - All Gyroscope/accelerometer AVG and STD data average per Activity and Subject.
+</br>* - All Gyroscope/accelerometer AVG and STD data average per Activity and Subject.<h4>
