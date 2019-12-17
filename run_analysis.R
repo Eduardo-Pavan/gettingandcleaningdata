@@ -1,7 +1,9 @@
 library(dplyr)
+
 # 1 - Merges the training and the test sets to create one data set
 train_data <- cbind(read.csv("UCI HAR Dataset/train/subject_train.txt", header = FALSE), read.fwf("UCI HAR Dataset/train/X_train.txt", widths = rep_len(16,561)), read.csv("UCI HAR Dataset/train/y_train.txt", header = FALSE))
 test_data <- cbind(read.csv("UCI HAR Dataset/test/subject_test.txt", header = FALSE), read.fwf("UCI HAR Dataset/test/X_test.txt", widths = rep_len(16,561)), read.csv("UCI HAR Dataset/test/y_test.txt", header = FALSE))
+
 # 4 - Appropriately labels the data set with descriptive variable names. 
 F_names = as.vector(rbind(data.frame(V1 = "Subject"), select(read.csv("UCI HAR Dataset/features.txt", sep = "\t", header = FALSE),1), data.frame(V1 = "Label"))[,1])
 names(train_data) <- F_names
